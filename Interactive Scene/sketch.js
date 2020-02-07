@@ -14,17 +14,34 @@ function draw() {
   background(0, 150, 255);
   hill();
   dinosaur();
+  sun();
 }
 
 function hill(){
-  ellipse(windowWidth / 2, windowHeight / 1 , windowWidth * 2, windowHeight * 1);
   fill( 100 ,200, 0);
+  rectMode(CENTER);
+  rect(width / 2, width / 1, windowWidth, windowHeight / .95);
+  rectMode(CORNER);
+  
 }
 
 function dinosaur(){
-  ellipse(windowWidth / 2, windowHeight / 2.3, 30, 20);
-  rect()
+  fill(235, 117, 77);
+  rect(windowWidth / 2, windowHeight / 2.3, windowWidth * 0.011, 40); // neck
+  rect(windowWidth / 2.02, windowHeight / 2.1, windowWidth * 0.009, 25); //leg 1
+  rect(windowWidth / 1.97, windowHeight / 2.1, windowWidth * 0.009, 25); //leg 2
+  rect(windowWidth / 1.92, windowHeight / 2.1, windowWidth * 0.009, 25); //leg 3
+  rect(windowWidth / 1.87, windowHeight / 2.1, windowWidth * 0.009, 25); //leg 4
+  ellipse(windowWidth / 2, windowHeight / 2.3, windowWidth * 0.03, windowHeight * 0.025); //head
+  ellipse(windowWidth / 1.923, windowHeight / 2.09, windowWidth * 0.05  , windowHeight * 0.03); //torso
 }
+
+function sun(){
+  fill(240, 240, 40);
+  ellipse(windowWidth / 1.25, windowHeight / 10, 200);
+}
+
+
 
 
 
