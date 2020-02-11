@@ -9,6 +9,7 @@ let x , y;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   x = windowWidth;
+  y = windowHeight
 }
 
 function draw() {
@@ -33,13 +34,13 @@ function hill(){
 function dinosaur(){
   
   fill(235, 117, 77);
-  rect(x / 2, windowHeight / 2.3, 10, 40); // neck
-  rect(x / 2.02, windowHeight / 2.1, 7, 25); //leg 1
-  rect(x / 1.97, windowHeight / 2.1, 7, 25); //leg 2
-  rect(x / 1.92, windowHeight / 2.1, 7, 25); //leg 3
-  rect(x / 1.87, windowHeight / 2.1, 7, 25); //leg 4
-  ellipse(x / 2.01, windowHeight / 2.3, 30, 25); //head
-  ellipse(x / 1.923, windowHeight / 2.09, windowWidth * 0.05  , windowHeight * 0.03); //torso
+  rect(x / 2, y / 2.3, 10, 40); // neck
+  rect(x / 2.02, y / 2.1, 7, 25); //leg 1
+  rect(x / 1.97, y / 2.1, 7, 25); //leg 2
+  rect(x / 1.92, y / 2.1, 7, 25); //leg 3
+  rect(x / 1.87, y / 2.1, 7, 25); //leg 4
+  ellipse(x / 2.01, y / 2.3, 30, 25); //head
+  ellipse(x / 1.923, y / 2.09, 40  , 20); //torso
 
 }
 
@@ -63,26 +64,3 @@ function sun(){
   fill(240, 240, 40);
   ellipse(windowWidth / 1.25, windowHeight / 10, 200);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
