@@ -37,36 +37,35 @@ function draw() {
   updateCurrentSide();
   renderRectangle();
   //print("  Left:" + onLeft + "   Right" + onRight);
-  if(mouseX > width*.25 && mouseX < width*.75 && mouseY > height*.25 && mouseY < height*.75){
+  if(mouseX > width*.25 && mouseX < width*.75 && mouseY > height*.25 && mouseY < height*75){
     fill(80,160,240,120)
   }
   else{
     fill(20,200,20,120);
   }
-  fill(80,160,240,120);
   rect(width*.25,height*.25, width / 2, height / 2);
 
 }
 
 function renderRectangle(){
   if (onLeft) {// onLeft === true
-    fill (0, leftFade);
+    fill (255,0,0, leftFade);
     leftFade += FADE_SPEED;
   }
   else{
     fill(255);
     leftFade = 0;
   }
-  fill (0,0, width /2,height);
+  rect (0,0, width /2,height);
   
   //draw two rectangles on the screen
   if (onRight){
-    fill (0, rightFade);
+    fill (0, 0, 255, rightFade);
     rightFade += FADE_SPEED;
   }
   else {
     fill(255);
     rightFade = 0;
-  fill(width/2,0,width/2,height);}
-
+  }
+  rect(width/2,0,width/2,height);
 }
