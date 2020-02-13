@@ -12,7 +12,7 @@ const FADE_SPEED = 3;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  onLeft = true;
+  onLeft = false;
   onRight = false;
 }
 
