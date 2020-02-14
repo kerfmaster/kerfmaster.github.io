@@ -38,7 +38,7 @@ function draw() {
   renderRectangle();
   //print("  Left:" + onLeft + "   Right" + onRight);
   if(mouseX > width*.25 && mouseX < width*.75 && mouseY > height*.25 && mouseY < height*75){
-    fill(80,160,240,120)
+    fill(80,160,240,120);
   }
   else{
     fill(20,200,20,120);
