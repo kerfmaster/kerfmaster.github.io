@@ -47,16 +47,16 @@ function renderRectangle(){
     fill(255);
     leftBottomFade = 0;
   }
-  rect ( 0 , height / 2 , width / 2, height / 2);
+  rect (2 , height / 2 , width / 2, height / 2);
   if (onRight && onBottom){
     fill (255,0,0, rightBottomFade);
     rightBottomFade += FADE_SPEED; 
   }
   else{
     fill(255);
-    rightBottomFade = 0;
+    rightBottomFade -= 0;
   }
-  rect ( width / 2 , height / 2 , width / 2, height / 2);
+  rect (width / 2 , height / 2 , width / 2, height / 2);
   if (onRight && onTop){
     fill (255,0,0, rightTopFade);
     rightTopFade += FADE_SPEED; 
@@ -64,7 +64,7 @@ function renderRectangle(){
   }
   else{
     fill(255);
-    rightTopFade = 0;
+    rightTopFade -= 0;
   }
   rect ( width / 2 , 0 , width / 2, height / 2);
 }
@@ -86,6 +86,7 @@ function updateCurrentCorner(){
   }
   //mouse if on bottom right
   else if (mouseX > width / 2.0 && mouseY > height / 2.0){
+
     onLeft = false;
     onTop = false;
     onBottom = true;
