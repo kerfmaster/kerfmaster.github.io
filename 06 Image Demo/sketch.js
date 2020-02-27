@@ -5,57 +5,70 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+// Image Demo
 let lionL, lionR;
 let movingLeft = true;
-let movingRight = true;
+let pinImages = [];
+let pinFrame = 0;
 
-function preload(){
+function preload() {
   lionL = loadImage("assets/lion-left.png");
   lionR = loadImage("assets/lion-right.png");
-  //pin00 = loadImage("assets/pin-00.png");
-  //pin01 = loadImage("assets/pin-01.png");
-  //pin02 = loadImage("assets/pin-02.png");
-  //pin03 = loadImage("assets/pin-03.png");
-  //pin04 = loadImage("assets/pin-04.png");
-  //pin05 = loadImage("assets/pin-05.png");
-  //pin06 = loadImage("assets/pin-06.png");
-  //pin07 = loadImage("assets/pin-07.png");
-  //pin08 = loadImage("assets/pin-08.png");
+  for (let i = 0; i < 9; i++) {
+    pinImages.push(loadImage("assets/pin-0" + i + ".png"));
+
+  }
 
 }
 
-function determineDirection(){
-  if(pmouseX < mouseX){
-    //moving right
+function determineDirection() {
+  if (pmouseX < mouseX) {
+    //Moving right
     movingLeft = false;
   }
-  else if (pmouseX > mouseX){
+  else if (pmouseX > mouseX) {
     //moving left
-    movingRight = false;
+    movingLeft = true;
   }
+
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
   noCursor();
-  
-
+  frameRate(100);
 }
 
 function draw() {
   print(movingLeft);
   background(220);
-  //image(lionR, mouseX, mouseY);
-  //image(pin01, mouseX, mouseY);
   determineDirection();
-  if (keyIsPressed){
-    
+  if (keyIsPressed) {
+    tint(50, 100, 100);
   }
-  if(movingLeft){
+  else {
+    noTint();
+  }
+
+  if (movingLeft) {
     image(lionL, mouseX, mouseY, 130, 90);
   }
-  else{
+  else {
     image(lionR, mouseX, mouseY, 130, 90);
   }
+  print(frameCount);
+  image(pinImages[pinFrame], width / 2, height / 2);
+ 
+  let speedChange = map(mouseX, 0, width, 1, 4);
+  print(speedChange);
+  if (frameCount % int(speedChange) === 0) {
+    pinFrame++;
+    if (pinFrame > 8) {
+      pinFrame = 0;
+    }
+  }
+
 }
+
+
