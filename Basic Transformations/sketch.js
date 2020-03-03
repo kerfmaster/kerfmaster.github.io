@@ -23,7 +23,7 @@ function draw() {
     }
     else {
       strokeWeight(2);
-      line(width * 0.16, 0, width * 0.19, 0);
+      line(width * 0.16, 0a, width * 0.19, 0);
     }
     rotate(radians(6));
   }
