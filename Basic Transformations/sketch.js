@@ -13,11 +13,48 @@ function draw() {
   //drawBasicGrid(220);
   push();
   translate(width / 2, height / 2);
+  strokeWeight(5);
   ellipseMode(CENTER);
-  ellipse(0, 0, width * 0.3, width * 0.3);
+  ellipse(0, 0, width * 0.4, width * 0.4);
+  for (i = 0; i < 60; i++) {
+    if (i % 5 === 0) {
+      strokeWeight(4);
+      line(width * 0.15, 0, width * 0.19, 0);
+    }
+    else {
+      strokeWeight(2);
+      line(width * 0.16, 0, width * 0.19, 0);
+    }
+    rotate(radians(6));
+  }
+
+  push();
+  rotate(radians(second()*6));
+  stroke(255, 0, 0);
+  strokeWeight(2);
+  line(0, 0, width * 0.19, 0);
   pop();
 
+  push();
+  rotate(radians(minute()*6 +second() / 10));
+  stroke(255, 150, 0);
+  strokeWeight(5);
+  line(0, 0, width * 0.12, 0);
+  pop();
+
+  push();
+  rotate(radians(hour()*12));
+  stroke(150, 150, 0);
+  strokeWeight(5);
+  line(0, 0, width * 0.1, 0);
+  pop();
   
+  
+
+  
+  pop();
+
+
 
   //transformation one: TRANSLATION
 
