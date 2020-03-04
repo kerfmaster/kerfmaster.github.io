@@ -14,16 +14,16 @@ function draw() {
   line(0, 135, 480, 135);
   noStroke();
   fill(0);
-  if (mouseX<240&&mouseY<135){
-    rect(0,0,240,135);
-  }
-  else if (mouseX>240&&mouseY<135){
-    rect(240,0,240,135);
-  }
-  else if (mouseX<240&&mouseY>135){
-    rect(0,135,240,135);
-  }
-  else if (mouseX>240&&mouseY>135){
-    rect(240,135,240,135);
-  }
+}
+if (mouseX < 240 && mouseY < 135){
+  rect(0,0,240,135);
+}
+else if (mouseX > 240 && mouseY < 135){
+  rect(240,0,240,135);
+}
+else if (mouseX < 240 && mouseY > 135){
+  rect(0,135,240,135);
+}
+else if (mouseX > 240 && mouseY > 135){
+  rect(240,135,240,135);
 }
