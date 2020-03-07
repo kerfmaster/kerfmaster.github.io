@@ -13,19 +13,20 @@ function setup() {
   keyTyped();
 }
 
-function mouseClicked(){
+function mouseClicked() {
   rectGrid();
-  
-  if (keyIsDown(SHIFT)){
+
+  if (keyIsDown(SHIFT)) {
     gridSpacing += 1;
   }
-  
-  else if (gridSpacing !== 5){
+
+  else if (gridSpacing !== 5) {
     gridSpacing -= 1;
   }
 }
 
-function keyTyped(){
+
+function keyTyped() {
   rectGrid();
 }
 
@@ -33,7 +34,7 @@ function keyTyped(){
 function rectGrid() {
   for (let y = 0; y < height; y += gridSpacing) {
     for (let x = 0; x < width; x += gridSpacing) {
-      fill (random(1, 255), random(1, 255), random(1, 255));
+      fill(random(1, 255), random(1, 255), random(1, 255));
       rect(x, y, gridSpacing, gridSpacing);
     }
   }

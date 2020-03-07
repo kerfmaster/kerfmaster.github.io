@@ -13,16 +13,24 @@ function setup() {
 
 function draw() {
   background(220);
-  randtangle();
+  //randtangle();
+  randtangleTwo();
+  rectScreen();
 }
 
-function randtangle(){
+// function randtangle() {
+//   rectMode(CORNERS);
+//   rect(0, height, rectSpacing, random([height], [0]));
+// }
+
+function randtangleTwo() {
   rectMode(CORNERS);
-  rect(25, 25, 0, height);
+  rect(rectSpacing, height, rectSpacing + rectSpacing, random([height], [0]));
 }
 
-rectScreen(){
-  for (let x = 0; x < width; x += rectSpacing){
-    rect(x, y, random(height, height), gridspacing)
+
+function rectScreen() {
+  for (let x = 0; x < width; x += rectSpacing) {
+    randtangle(randtangle, height, rectSpacing += rectSpacing, random(height, [0]));
   }
 }
