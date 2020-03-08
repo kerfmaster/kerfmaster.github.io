@@ -10,7 +10,7 @@ let gridSpacing = 30;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   mouseClicked();
-  keyTyped();
+  keyPressed();
 }
 
 function mouseClicked() {
@@ -25,11 +25,9 @@ function mouseClicked() {
   }
 }
 
-
-function keyTyped() {
+function keyPressed() {
   rectGrid();
 }
-
 
 function rectGrid() {
   for (let y = 0; y < height; y += gridSpacing) {
@@ -39,4 +37,3 @@ function rectGrid() {
     }
   }
 }
-

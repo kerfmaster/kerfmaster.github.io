@@ -10,8 +10,8 @@ const MAX_CIRCLE_SIZE = 200;
 let sizeTime = 10;
 let dT = 0.01;
 
-let perlinX = 5;
-let perlinY = 100;
+let perlinX = 100;
+let perlinY = 5;
 let movementdT = 0.1;
 
 let arrayX = [];    
