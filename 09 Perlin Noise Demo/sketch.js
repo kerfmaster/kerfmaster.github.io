@@ -4,7 +4,7 @@
 //
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
-let x, y, size;
+let x, y;
 const MAX_CIRCLE_SIZE = 200;
 
 let sizeTime = 10;
