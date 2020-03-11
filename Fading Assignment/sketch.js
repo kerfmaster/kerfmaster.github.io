@@ -87,8 +87,8 @@ function updateCurrentCorner(){
   //mouse if on bottom right
   else if (mouseX > width / 2.0 && mouseY > height / 2.0){
 
-    onLeft = false;
-    onTop = false;
+    onLeft = true;
+    onTop = true;
     onBottom = true;
     onRight = true;
   }
