@@ -1,4 +1,4 @@
-// Diaganal Line Art
+// Cubic Disarray
 
 let GRID_SIZE = 4;
 let seed;
